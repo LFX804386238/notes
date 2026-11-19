@@ -7,7 +7,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 NOTES=/root/notes
 LOG=/root/.dsh/backup.log
 ts(){ date '+%F %T'; }
-PUSH_URL=$(sed -n 's/.*\(https:\/\/[^"]*x-access-token[^"]*\).*/\1/p' /root/.dsh/bin/trendradar-mail.sh | head -1)
+set -a; source /root/.dsh/.env 2>/dev/null; set +a
 
 mkdir -p $NOTES/diary $NOTES/backup
 
@@ -35,7 +35,7 @@ if git diff --cached --quiet 2>/dev/null; then
   exit 0
 fi
 git commit -qm "chore(backup): diary & site config $(date +%F-%H%M)" >> $LOG 2>&1
-if git push -q "$PUSH_URL" HEAD:main 2>>$LOG; then
+if git push -q "https://x-access-token:${GITHUB_TOKEN}@github.com/LFX804386238/notes.git" HEAD:main 2>>$LOG; then
   echo "[$(ts)] backup pushed ok" >> $LOG
 else
   echo "[$(ts)] BACKUP PUSH FAILED" >> $LOG
