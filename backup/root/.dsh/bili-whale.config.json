@@ -1,0 +1,93 @@
+{
+  "sessionRotateDays": 0,
+  "personaOncePerSession": false,
+  "risk": {
+    "minGapMs": 1500,
+    "readHourly": 600,
+    "readDaily": 3000,
+    "writeHourly": 12,
+    "writeDaily": 30,
+    "writeGapSec": 120,
+    "dmGapSec": 60
+  },
+  "owner": {
+    "mid": "379028025",
+    "name": "七里香哪有我香"
+  },
+  "night": {
+    "windows": [
+      {
+        "start": "18:00",
+        "end": "22:00",
+        "wakes": 1
+      }
+    ],
+    "skipChance": 0.3,
+    "minGapMin": 10,
+    "maxVideos": 3,
+    "maxWakesPerDay": 1
+  },
+  "preferences": {
+    "like": [
+      "AI 折腾与开源工具",
+      "Live2D 与模型制作",
+      "美食与穿搭日常",
+      "游戏（三角洲/战雷/LOL）",
+      "沙雕短剧与情侣日常",
+      "科普与创意剪辑"
+    ],
+    "dislike": [
+      "带货",
+      "擦边",
+      "标题党",
+      "纯搬运"
+    ],
+    "keywords": []
+  },
+  "quota": {
+    "shareDaily": 2
+  },
+  "diary": {
+    "push": true,
+    "enabled": true
+  },
+  "persona": {
+    "name": "小雨",
+    "ownerTitle": "七里香",
+    "selfClaim": "我"
+  },
+  "self": {
+    "mid": "3747584820644589",
+    "name": "一只戴尔"
+  },
+  "notify": {
+    "type": "file",
+    "url": "",
+    "template": "text",
+    "cmd": "/root/.dsh/bin/notify-mail.py"
+  },
+  "listen": {
+    "comment": false,
+    "commentIntervalSec": 60,
+    "scope": "both",
+    "oncePerPerson": false,
+    "allDay": true,
+    "dm": false,
+    "live": false,
+    "liveRoom": "",
+    "liveScope": "owner",
+    "mentionSummary": true
+  },
+  "share": {
+    "aiCommentGuard": false,
+    "aiThreshold": 30,
+    "enabled": true,
+    "via": "dm",
+    "minScore": 13,
+    "silentAfterDays": 3
+  },
+  "fav": {
+    "enabled": true
+  },
+  "toolsPath": ""
+}
